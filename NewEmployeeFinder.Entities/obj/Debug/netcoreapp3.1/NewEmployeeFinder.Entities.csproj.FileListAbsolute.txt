@@ -1,0 +1,8 @@
+C:\Users\user\source\repos\NewEmployeeFinder\NewEmployeeFinder.Entities\bin\Debug\netcoreapp3.1\NewEmployeeFinder.Entities.deps.json
+C:\Users\user\source\repos\NewEmployeeFinder\NewEmployeeFinder.Entities\bin\Debug\netcoreapp3.1\NewEmployeeFinder.Entities.dll
+C:\Users\user\source\repos\NewEmployeeFinder\NewEmployeeFinder.Entities\bin\Debug\netcoreapp3.1\NewEmployeeFinder.Entities.pdb
+C:\Users\user\source\repos\NewEmployeeFinder\NewEmployeeFinder.Entities\obj\Debug\netcoreapp3.1\NewEmployeeFinder.Entities.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\NewEmployeeFinder\NewEmployeeFinder.Entities\obj\Debug\netcoreapp3.1\NewEmployeeFinder.Entities.AssemblyInfo.cs
+C:\Users\user\source\repos\NewEmployeeFinder\NewEmployeeFinder.Entities\obj\Debug\netcoreapp3.1\NewEmployeeFinder.Entities.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\NewEmployeeFinder\NewEmployeeFinder.Entities\obj\Debug\netcoreapp3.1\NewEmployeeFinder.Entities.dll
+C:\Users\user\source\repos\NewEmployeeFinder\NewEmployeeFinder.Entities\obj\Debug\netcoreapp3.1\NewEmployeeFinder.Entities.pdb
