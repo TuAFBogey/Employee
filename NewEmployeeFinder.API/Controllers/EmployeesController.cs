@@ -97,5 +97,12 @@ namespace NewEmployeeFinder.API.Controllers
             _employeeService.Remove(employee);
             return NoContent();
         }
+
+        [HttpPost("range")]
+        public async Task<IActionResult> AddRange(IEnumerable<EmployeeDto> employeeDto)
+        {
+           var newEmployees = await _employeeService.AddRangeAsync(_mapper.Map<IEnumerable<Employee>>(employeeDto));
+           return Created(string.Empty, newEmployees);
+        }
     }
 }
