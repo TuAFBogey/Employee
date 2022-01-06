@@ -16,3 +16,4 @@ C:\Users\Piton\Desktop\NewEmployeeFinder-main\NewEmployeeFinder-main\NewEmployee
 C:\Users\Piton\Desktop\NewEmployeeFinder-main\NewEmployeeFinder-main\NewEmployeeFinder.Entities\obj\Debug\netcoreapp3.1\NewEmployeeFinder.Core.csproj.CoreCompileInputs.cache
 C:\Users\Piton\Desktop\NewEmployeeFinder-main\NewEmployeeFinder-main\NewEmployeeFinder.Entities\obj\Debug\netcoreapp3.1\NewEmployeeFinder.Core.dll
 C:\Users\Piton\Desktop\NewEmployeeFinder-main\NewEmployeeFinder-main\NewEmployeeFinder.Entities\obj\Debug\netcoreapp3.1\NewEmployeeFinder.Core.pdb
+C:\Users\Piton\Desktop\NewEmployeeFinder-main\NewEmployeeFinder-main\NewEmployeeFinder.Entities\obj\Debug\netcoreapp3.1\NewEmployeeFinder.Core.csproj.AssemblyReference.cache

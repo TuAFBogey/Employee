@@ -27,9 +27,9 @@ namespace NewEmployeeFinder.API.Controllers
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
-        {
+        {            
             var employees = await _employeeService.GetAllAsync();
-            return Ok(_mapper.Map<IQueryable<EmployeeDto>>(employees));
+            return Ok(_mapper.Map<IEnumerable<EmployeeDto>>(employees));
         }
 
         [HttpGet("employee")]
