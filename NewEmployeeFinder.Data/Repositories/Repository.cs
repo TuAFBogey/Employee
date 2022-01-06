@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NewEmployeeFinder.Entities.Repositories;
+using NewEmployeeFinder.Data.IRepositories;
 using System;
 using System.Collections;
 using System.Collections.Generic;

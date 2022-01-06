@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewEmployeeFinder.Entities.Repositories
+namespace NewEmployeeFinder.Data.IRepositories
 {
     public interface IDepartmentRepository:IRepository<Department>
     {

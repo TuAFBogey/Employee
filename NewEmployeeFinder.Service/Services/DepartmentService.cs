@@ -1,7 +1,7 @@
-﻿using NewEmployeeFinder.Core.Services;
-using NewEmployeeFinder.Core.UnitOfWorks;
+﻿using NewEmployeeFinder.Data.IRepositories;
+using NewEmployeeFinder.Data.IUnitOfWorks;
 using NewEmployeeFinder.Entities.Entities;
-using NewEmployeeFinder.Entities.Repositories;
+using NewEmployeeFinder.Service.IServices;
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using NewEmployeeFinder.Data;
 using NewEmployeeFinder.Entities.Entities;
 using NewEmployeeFinder.Service.DTOs;
-using NewEmployeeFinder.Service.Services;
+using NewEmployeeFinder.Service.IServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +29,7 @@ namespace NewEmployeeFinder.API.Controllers
         public async Task<IActionResult> GetAll()
         {
             var employees = await _employeeService.GetAllAsync();
-            return Ok(_mapper.Map<IEnumerable<EmployeeDto>>(employees));
+            return Ok(_mapper.Map<IQueryable<EmployeeDto>>(employees));
         }
 
         [HttpGet("employee")]

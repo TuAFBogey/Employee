@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewEmployeeFinder.Entities.Repositories
+namespace NewEmployeeFinder.Data.IRepositories
 {
     public interface IRepository<TEntity> where TEntity:class
     {

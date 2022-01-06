@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NewEmployeeFinder.Entities.Entities;
-using NewEmployeeFinder.Entities.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
+using NewEmployeeFinder.Data.IRepositories;
 
 namespace NewEmployeeFinder.Data.Repositories
 {

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NewEmployeeFinder.Data.IRepositories;
 using NewEmployeeFinder.Entities.Entities;
-using NewEmployeeFinder.Entities.Repositories;
+
 using System;
 using System.Collections.Generic;
 using System.Text;

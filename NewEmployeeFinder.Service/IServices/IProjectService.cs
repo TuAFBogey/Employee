@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewEmployeeFinder.Entities.Repositories
+namespace NewEmployeeFinder.Service.IServices
 {
-    public interface IProjectRepository : IRepository<Project>
+    public interface IProjectService : IService<Project>
     {
         Task<Project> GetWithEmployeesByIdAsync(int projectId);
     }

@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewEmployeeFinder.Core.Services
+namespace NewEmployeeFinder.Service.IServices
 {
     public interface IService<TEntity> where TEntity:class
     {

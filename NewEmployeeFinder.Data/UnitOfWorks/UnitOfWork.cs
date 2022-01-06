@@ -1,12 +1,12 @@
-﻿using NewEmployeeFinder.Core.UnitOfWorks;
+﻿using NewEmployeeFinder.Data.IRepositories;
+using NewEmployeeFinder.Data.IUnitOfWorks;
 using NewEmployeeFinder.Data.Repositories;
-using NewEmployeeFinder.Entities.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewEmployeeFinder.Data.UnitOfWorks
+namespace NewEmployeeFinder.Data.IUnitOfWorks
 {
     public class UnitOfWork : IUnitOfWork
     {

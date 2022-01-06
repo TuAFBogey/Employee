@@ -1,7 +1,4 @@
-﻿using NewEmployeeFinder.Core.Services;
-using NewEmployeeFinder.Core.UnitOfWorks;
-using NewEmployeeFinder.Entities.Entities;
-using NewEmployeeFinder.Entities.Repositories;
+﻿using NewEmployeeFinder.Entities.Entities;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,21 +6,15 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
-using NewEmployeeFinder.Service.DTOs;
 using AutoMapper;
+using NewEmployeeFinder.Service.DTOs;
+using NewEmployeeFinder.Service.IServices;
+using NewEmployeeFinder.Data.IUnitOfWorks;
+using NewEmployeeFinder.Data.IRepositories;
 
 namespace NewEmployeeFinder.Service.Services
 {
-    public interface IEmployeeService : IService<Employee>
-    {
-        Task<Employee> GetWithDepartmentByIdAsync(int employeeId);
-
-        Task<Employee> GetWithProjectByIdAsync(int employeeId);
-
-        Task<Employee> GetWithCityByIdAsync(int employeeId);
-
-        IEnumerable<EmployeeWithNames> GetAllWithNames();
-    }
+    
     public class EmployeeService : Service<Employee>, IEmployeeService
     {
         private readonly IMapper _mapper;
@@ -32,7 +23,7 @@ namespace NewEmployeeFinder.Service.Services
             _mapper = mapper;
         }
 
-        
+
         public IEnumerable<EmployeeWithNames> GetAllWithNames()
         {
             var employees = _unitOfWork.Employees.GetAllWithNames().
@@ -62,7 +53,5 @@ namespace NewEmployeeFinder.Service.Services
         {
             return await _unitOfWork.Employees.GetWithProjectByIdAsync(employeeId);
         }
-
-        
     }
 }

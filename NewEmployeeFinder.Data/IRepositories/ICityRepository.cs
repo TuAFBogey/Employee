@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewEmployeeFinder.Core.Services
+namespace NewEmployeeFinder.Data.IRepositories
 {
-    public interface ICityService : IService<City>
+    public interface ICityRepository : IRepository<City>
     {
         Task<City> GetWithEmployeesByIdAsync(int cityId);
     }

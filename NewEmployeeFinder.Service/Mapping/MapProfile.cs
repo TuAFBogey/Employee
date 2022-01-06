@@ -41,7 +41,7 @@ namespace NewEmployeeFinder.Service.Mapping
             CreateMap<Employee, EmployeeWithCityDto>();
             CreateMap<EmployeeWithCityDto, Employee>();
 
-            CreateMap<EmployeeDto, EmployeeWithNames>().ReverseMap();
+            CreateMap<Employee, EmployeeWithNames>().ReverseMap();
            
         }
     }

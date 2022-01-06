@@ -1,10 +1,10 @@
-﻿using NewEmployeeFinder.Entities.Repositories;
+﻿using NewEmployeeFinder.Data.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewEmployeeFinder.Core.UnitOfWorks
+namespace NewEmployeeFinder.Data.IUnitOfWorks
 {
     public interface IUnitOfWork
     {

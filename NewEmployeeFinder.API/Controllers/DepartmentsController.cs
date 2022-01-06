@@ -3,14 +3,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NewEmployeeFinder.Service.DTOs;
-using NewEmployeeFinder.Core.Services;
 using NewEmployeeFinder.Entities.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
-
+using NewEmployeeFinder.Service.IServices;
 
 namespace NewEmployeeFinder.API.Controllers
 {
