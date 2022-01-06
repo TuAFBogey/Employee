@@ -104,5 +104,14 @@ namespace NewEmployeeFinder.API.Controllers
            var newEmployees = await _employeeService.AddRangeAsync(_mapper.Map<IEnumerable<Employee>>(employeeDto));
            return Created(string.Empty, newEmployees);
         }
+
+        [HttpDelete("{name}/names")]
+        public IActionResult DeleteByNames(string name)
+        {
+            var employee = _employeeService.GetEmployeesByNames(name);
+            var emp = _mapper.Map<EmployeeWithNames>(employee);
+            _employeeService.DeleteByNames(emp);
+            return NoContent();
+        }
     }
 }

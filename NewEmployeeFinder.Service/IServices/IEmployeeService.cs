@@ -18,5 +18,7 @@ namespace NewEmployeeFinder.Service.IServices
         IEnumerable<EmployeeWithNames> GetEmployeesByNames(string name);
 
         IEnumerable<EmployeeWithNames> GetEmployeesByCity(string city);
+
+        void DeleteByNames(EmployeeWithNames employee);
     }
 }

@@ -19,6 +19,12 @@ namespace NewEmployeeFinder.Service.Services
             _mapper = mapper;
         }
 
+        public void DeleteByNames(EmployeeWithNames employee)
+        {
+            
+            _unitOfWork.Employees.Remove(_mapper.Map<Employee>(employee));
+        }
+
         public IEnumerable<EmployeeWithNames> GetAllWithNames()
         {
             var employees = _unitOfWork.Employees.GetAllWithNames().
@@ -71,5 +77,7 @@ namespace NewEmployeeFinder.Service.Services
         {
             return await _unitOfWork.Employees.GetWithProjectByIdAsync(employeeId);
         }
+
+
     }
 }
