@@ -1,8 +1,6 @@
 ﻿using NewEmployeeFinder.Entities.Entities;
 using NewEmployeeFinder.Service.DTOs;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace NewEmployeeFinder.Service.IServices
@@ -16,5 +14,9 @@ namespace NewEmployeeFinder.Service.IServices
         Task<Employee> GetWithCityByIdAsync(int employeeId);
 
         IEnumerable<EmployeeWithNames> GetAllWithNames();
+
+        IEnumerable<EmployeeWithNames> GetEmployeesByNames(string name);
+
+        IEnumerable<EmployeeWithNames> GetEmployeesByCity(string city);
     }
 }

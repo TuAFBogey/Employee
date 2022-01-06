@@ -1,14 +1,9 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using NewEmployeeFinder.Data;
 using NewEmployeeFinder.Entities.Entities;
 using NewEmployeeFinder.Service.DTOs;
 using NewEmployeeFinder.Service.IServices;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace NewEmployeeFinder.API.Controllers
@@ -39,6 +34,20 @@ namespace NewEmployeeFinder.API.Controllers
             return Ok(_mapper.Map<IEnumerable<EmployeeWithNames>>(employee));
         }
 
+        [HttpGet("byName")]
+        public IActionResult GetAllEmployeeByName(string name)
+        {
+            var employee = _employeeService.GetEmployeesByNames(name);
+            return Ok(_mapper.Map<IEnumerable<EmployeeWithNames>>(employee));
+        }
+
+        [HttpGet("byCity")]
+        public IActionResult GetAllEmployeeByCity(string city)
+        {
+            var employee = _employeeService.GetEmployeesByCity(city);
+            return Ok(_mapper.Map<IEnumerable<EmployeeWithNames>>(employee));
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -46,7 +55,6 @@ namespace NewEmployeeFinder.API.Controllers
             return Ok(_mapper.Map<EmployeeDto>(employee));
         }
 
-        //[ServiceFilter(typeof(NotFoundFilter))]
         [HttpGet("{id}/department")]
         public async Task<IActionResult> GetWithDepartmentsById(int id)
         {

@@ -1,9 +1,5 @@
 ﻿using NewEmployeeFinder.Entities.Entities;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
 using AutoMapper;
@@ -23,20 +19,42 @@ namespace NewEmployeeFinder.Service.Services
             _mapper = mapper;
         }
 
-
         public IEnumerable<EmployeeWithNames> GetAllWithNames()
         {
             var employees = _unitOfWork.Employees.GetAllWithNames().
                 Select(x => new EmployeeWithNames
                 {
-                    Id = x.Id,
                     EmployeeName = x.EmployeeName,
                     DepartmentName = x.Department.DepartmentName,
                     ProjectName = x.Project.ProjectName,
                     CityName = x.City.CityName
-                }).ToList().Distinct();
+                }).ToList();
 
             return employees;
+        }
+
+        public IEnumerable<EmployeeWithNames> GetEmployeesByCity(string city)
+        {
+            return _unitOfWork.Employees.GetAllWithNames().Select(
+                x => new EmployeeWithNames
+                {
+                    EmployeeName = x.EmployeeName,
+                    DepartmentName = x.Department.DepartmentName,
+                    ProjectName = x.Project.ProjectName,
+                    CityName = x.City.CityName
+                }).Where(x=>x.CityName == city).OrderBy(x => x.EmployeeName).ToList();
+        }
+
+        public IEnumerable<EmployeeWithNames> GetEmployeesByNames(string name)
+        {
+            return _unitOfWork.Employees.GetAllWithNames().Where(x => x.EmployeeName == name).Select(
+                x => new EmployeeWithNames
+                {
+                    EmployeeName = x.EmployeeName,
+                    DepartmentName = x.Department.DepartmentName,
+                    ProjectName = x.Project.ProjectName,
+                    CityName = x.City.CityName
+                }).ToList();
         }
 
         public async Task<Employee> GetWithCityByIdAsync(int employeeId)
